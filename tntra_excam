@@ -1,0 +1,71 @@
+  # Answer 1
+def co_occurrences(input_string,character):
+    count = 0
+    for char in input_string:
+        if char == character:
+            count += 1
+    return count
+
+input_str1 = "geekforgeek"
+character1 = 'e'
+result1 = co_occurrences(input_str1,character1)
+print(f"count character '{character1}' in the input : {result1}")
+
+input_str2 = "abccdefgaa"
+character2 = 'a'
+result2 = co_occurrences(input_str2,character2)
+print(f"count character '{character2}' in the input : {result2}")
+
+# Answer 2
+
+def palindrome( input_string):
+    input_string = input_string.lower ()
+    input_string = input_string.replace(" ","")
+    return input_string == input_string[::-1]
+
+print(palindrome ("anna" ))
+print(palindrome ("India" ))
+
+# Answer 3
+
+def find_max_min(arr):
+    if not arr:
+        return None, None 
+
+    maximum = minimum = arr[0]
+
+    for num in arr:
+        if num > maximum:
+            maximum = num
+        elif num < minimum:
+            minimum = num
+    return maximum, minimum
+
+arr1 = [1, 2, 3, 4, 5]
+max1, min1 = find_max_min (arr1)
+print ("Maximum is:" , max1)
+print ("Minimum is:" , min1)
+
+arr2 = [5, 3, 7, 4, 2]
+max2, min2 = find_max_min (arr2)
+print ("Maximum is: " , max2 )
+print ("Minimum is : ", min2)
+
+# Answer 4
+
+a = "Hello"
+b= "World"
+
+(a,b) = (b,a)
+print("String after awap : a = ",a, "and b = ",b)
+
+# Answer 5
+
+a = 10
+b = 50
+
+a = a + b
+b = a - b
+a = a - b
+
+print("Number after swap :a = ",a, "and b = ",b)
